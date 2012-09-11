@@ -48,8 +48,8 @@ function parse_git_dirty() {
 }
 
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  [[ $(git branch 2> /dev/null) ]] && echo "["$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/")"]"
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]])\[$PURPLE\][\$(parse_git_branch)]\[$WHITE\]\n\$ \[$RESET\]"
+export PS1="\[${BOLD}${MAGENTA}\]\u@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]➜ \[$RESET\]"
