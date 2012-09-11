@@ -10,6 +10,13 @@ call pathogen#infect()
 "" Powerline bundle
 let g:Powerline_symbols = 'fancy'
 
+"" NERDTree bundle
+silent! nmap <C-p> :NERDTreeToggle<CR>
+silent! map <F3> :NERDTreeFind<CR>
+
+let g:NERDTreeMapActivateNode="<F3>"
+let g:NERDTreeMapPreview="<F4>"
+
 " Make Vim more useful
 set nocompatible
 
