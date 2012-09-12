@@ -18,6 +18,15 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Git
+alias gst="git status"
+alias ga="git add"
+alias gc="git commit -v"
+alias ggpush="git push origin master"
+alias ggpull="git pull origin master"
+alias glr="git pull --rebase"
+alias gslrp="git stash && git pull --rebase && git stash pop"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
