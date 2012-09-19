@@ -2,6 +2,8 @@
 # Shamelessly copied from https://github.com/gf3/dotfiles
 # Screenshot: http://i.imgur.com/s0Blh.png
 
+PROMPT_COMMAND="make_prompt"
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -43,6 +45,14 @@ export WHITE
 export BOLD
 export RESET
 
+function smiley() {
+  if [ $? == 0 ]; then
+    echo "${GREEN}^_^${RESET}"
+  else
+    echo "${MAGENTA}O_o${RESET}"
+  fi
+}
+
 function parse_git_dirty() {
 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
@@ -51,5 +61,7 @@ function parse_git_branch() {
   [[ $(git branch 2> /dev/null) ]] && echo "["$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/")"]"
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
-export PS2="\[$ORANGE\]➜ \[$RESET\]"
+function make_prompt() {
+  export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\[$PURPLE\]\$(parse_git_branch)\[$WHITE\] $(smiley) \n\$ \[$RESET\]"
+  export PS2="\[$ORANGE\]➜ \[$RESET\]"
+}

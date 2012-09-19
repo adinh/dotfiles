@@ -1,6 +1,8 @@
 # RVM stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+export PATH=/usr/local/mysql/bin:$PATH
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Tan Le"
