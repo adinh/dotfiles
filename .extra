@@ -1,7 +1,11 @@
 # RVM stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/usr/local/mysql/bin:$PATH
+PATH="/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/share/npm/bin:$PATH"
+export PATH
+
+export ARCHFLAGS="-arch x86_64"
 
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name

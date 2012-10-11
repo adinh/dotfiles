@@ -62,6 +62,7 @@ function parse_git_branch() {
 }
 
 function make_prompt() {
-  export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\[$PURPLE\]\$(parse_git_branch)\[$WHITE\] $(smiley) \n\$ \[$RESET\]"
-  export PS2="\[$ORANGE\]➜ \[$RESET\]"
+  export PS1="$(powerline-bash.py $?)"
+  # export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\[$PURPLE\]\$(parse_git_branch)\[$WHITE\] $(smiley) \n\$ \[$RESET\]"
+  # export PS2="\[$ORANGE\]➜ \[$RESET\]"
 }
