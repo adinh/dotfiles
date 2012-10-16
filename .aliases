@@ -27,6 +27,10 @@ alias ggpull="git pull origin master"
 alias glr="git pull --rebase"
 alias gslrp="git stash && git pull --rebase && git stash pop"
 
+# Ruby
+alias rspec="rspec --color"
+alias be="bundle exec"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -80,8 +84,8 @@ command -v hd > /dev/null || alias hd="hexdump -C"
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
 
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+# View files with colourize
+alias c="pygmentize -O style=monokai -f console256 -g"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"

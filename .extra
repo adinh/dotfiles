@@ -3,6 +3,8 @@
 
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
+PATH="/usr/local/share/python:$PATH"
+PATH="/usr/local/lib/python2.7/site-packages:$PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
