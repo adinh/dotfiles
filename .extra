@@ -1,14 +1,6 @@
 # RVM stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-PATH="/usr/local/mysql/bin:$PATH"
-PATH="/usr/local/share/npm/bin:$PATH"
-PATH="/usr/local/share/python:$PATH"
-PATH="/usr/local/lib/python2.7/site-packages:$PATH"
-export PATH
-
-export ARCHFLAGS="-arch x86_64"
-
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Tan Le"
