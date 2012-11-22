@@ -27,6 +27,9 @@ alias ggpull="git pull origin master"
 alias glr="git pull --rebase"
 alias gslrp="git stash && git pull --rebase && git stash pop"
 
+# Misc
+alias grep="grep --color"
+
 # Ruby
 alias rspec="rspec --color"
 alias be="bundle exec"
