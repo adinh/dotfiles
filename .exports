@@ -2,6 +2,7 @@
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
 PATH="/usr/local/share/python:/usr/local/lib/python2.7/site-packages:$PATH"
+PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
