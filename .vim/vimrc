@@ -17,7 +17,7 @@ silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
 
-let g:EasyMotion_leader_key = "<Leader>"
+let g:EasyMotion_leader_key="<Leader>"
 
 "" Tabular bundle
 nmap <Leader>a= :Tabularize /=<CR>
@@ -30,6 +30,12 @@ vmap <Leader>a> :Tabularize /=><cr>
 "" Insert new line without entering insert mode
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
+
+"" Taglist bundle
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+let Tlist_WinWidth=50
+map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F4> :TlistToggle<cr>
 
 colorscheme Tomorrow-Night-Eighties
 
@@ -79,7 +85,7 @@ set bs=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set smartindent
+set autoindent
 " Highlight searches
 set hlsearch
 " Ignore case of searches
