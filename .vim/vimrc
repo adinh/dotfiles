@@ -151,3 +151,8 @@ map <F4> :TlistToggle<cr>
 " CtrlP Plugins
 let g:ctrlp_extensions = ['funky']
 nnoremap <Space>fu :CtrlPFunky<Cr>
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
