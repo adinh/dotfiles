@@ -1,0 +1,9 @@
+# Options
+--smart-case
+--sort-files
+
+# Custom types
+--type-set=log:ext:log
+
+# Exclusions
+--type=nolog

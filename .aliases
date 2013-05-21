@@ -31,8 +31,9 @@ alias gslrp="git stash && git pull --rebase && git stash pop"
 alias grep="grep --color"
 
 # Ruby
-alias rspec="rspec --color"
+alias rspec="rspec --color -fd"
 alias be="bundle exec"
+alias bi="bundle install"
 alias bo="EDITOR=vim bundle open"
 
 # Detect which `ls` flavor is in use
