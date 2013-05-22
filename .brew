@@ -1,28 +1,25 @@
 #!/bin/bash
 
-# Make sure we’re using the latest Homebrew
-brew update
+brew update && brew upgrade
 
-# Upgrade any already-installed formulae
-brew upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-# Install Bash 4
+brew install ack
+brew install autoconf
 brew install bash
-
-# Install wget with IRI support
+brew install fontforge
+brew install freetds
+brew install gettext
+brew install git
+brew install jpeg
+brew install libpng
+brew install libtiff
+brew install mercurial
+brew install mysql
+brew install node
+brew install pkg-config
+brew install rbenv
+brew install readline
+brew install ruby-build
+brew install vim
 brew install wget --enable-iri
 
-# Install everything else
-brew install ack
-brew install git
-brew install node
-brew install rhino
-brew install webkit2png
-
-# Remove outdated versions from the cellar
 brew cleanup
