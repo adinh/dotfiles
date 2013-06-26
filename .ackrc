@@ -2,8 +2,9 @@
 --smart-case
 --sort-files
 
-# Custom types
---type-set=log:ext:log
-
 # Exclusions
---type=nolog
+--ignore-file=is:log
+--ignore-file=is:tags
+--ignore-dir=is:vendor
+--ignore-dir=is:coverage
+--ignore-dir=is:target
