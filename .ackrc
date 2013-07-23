@@ -3,8 +3,8 @@
 --sort-files
 
 # Exclusions
---ignore-file=is:log
 --ignore-file=is:tags
+--ignore-dir=is:log
 --ignore-dir=is:vendor
 --ignore-dir=is:coverage
 --ignore-dir=is:target
