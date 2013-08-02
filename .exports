@@ -14,7 +14,6 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 # PATH
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
-PATH="/usr/local/share/python:$PYTHONPATH:$PATH"
 PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH
 
