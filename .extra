@@ -7,7 +7,21 @@ GIT_AUTHOR_EMAIL="tanle.oz@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
+# Ruby stuff
 export RUBY_HEAP_MIN_SLOTS=500000
 export RUBY_HEAP_SLOTS_INCREMENT=250000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
+
+# Java stuff
+export JAVA_OPTS="-Xmx768M -XX:MaxPermSize=256m -Dfile.encoding=UTF-8"
+export CATALINA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true"
+export CATALINA_HOME=~/Apps/tomcat/6.0.37
+export CATALINA_BASE=$CATALINA_HOME
+alias tc='cd ${CATALINA_BASE}'
+alias tcc='rm -rf ${CATALINA_BASE}/webapps/*DS*'
+alias tcl='cd ${CATALINA_BASE}/logs'
+alias tcs='rm -rf $CATALINA_BASE/work && $CATALINA_HOME/bin/startup.sh'
+alias tcx='$CATALINA_HOME/bin/shutdown.sh'
+alias tct='tail -f ${CATALINA_BASE}/logs/catalina.out'
+alias tcw='cd ${CATALINA_BASE}/webapps'

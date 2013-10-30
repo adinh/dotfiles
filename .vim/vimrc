@@ -143,10 +143,6 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 nmap <Leader>a> :Tabularize /=><cr>
 vmap <Leader>a> :Tabularize /=><cr>
 
-" Insert new line without entering insert mode
-map <S-Enter> O<Esc>
-map <CR> o<Esc>
-
 " Taglist bundle
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let Tlist_WinWidth=50
@@ -161,10 +157,8 @@ let g:ctrlp_extensions = ['funky']
 nnoremap <Space>fu :CtrlPFunky<Cr>
 
 " Rspec.vim mappings
-" map <Leader>t :call RunCurrentSpecFile()<CR>
-" map <Leader>s :call RunNearestSpec()<CR>
-" map <Leader>l :call RunLastSpec()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
 
-vmap <C-c><C-c> <Plug>SendSelectionToTmux
-nmap <C-c><C-c> <Plug>NormalModeSendToTmux
-nmap <C-c>r <Plug>SetTmuxVars
+let g:rspec_command = "Dispatch rspec {spec}"
