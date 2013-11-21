@@ -8,3 +8,4 @@
 --ignore-dir=is:vendor
 --ignore-dir=is:coverage
 --ignore-dir=is:target
+--ignore-dir=is:build

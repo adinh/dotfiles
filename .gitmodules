@@ -40,9 +40,6 @@
 [submodule ".vim/bundle/javascript-syntax"]
   path = .vim/bundle/javascript-syntax
   url = git://github.com/jelera/vim-javascript-syntax.git
-[submodule ".vim/bundle/powerline"]
-  path = .vim/bundle/powerline
-  url = git://github.com/Lokaltog/vim-powerline.git
 [submodule ".vim/bundle/ruby"]
   path = .vim/bundle/ruby
   url = git://github.com/vim-ruby/vim-ruby.git
@@ -67,3 +64,12 @@
 [submodule ".vim/bundle/coffeescript"]
   path = .vim/bundle/coffeescript
   url = git@github.com:kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/funcoo"]
+	path = .vim/bundle/funcoo
+	url = git://github.com/rizzatti/funcoo.vim.git
+[submodule ".vim/bundle/dash"]
+	path = .vim/bundle/dash
+	url = git://github.com/rizzatti/dash.vim.git
+[submodule ".vim/bundle/airline"]
+	path = .vim/bundle/airline
+	url = git@github.com:bling/vim-airline.git
