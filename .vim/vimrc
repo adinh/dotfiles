@@ -38,9 +38,6 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/taglist.vim'
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
 " Make Vim more useful
 set nocompatible
 
