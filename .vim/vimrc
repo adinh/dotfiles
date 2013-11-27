@@ -7,8 +7,39 @@ filetype on
 filetype indent on
 filetype plugin on
 
-" Start pathogen for managing plugins, etc.
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'Lokaltog/sparkup'
+Bundle 'Raimondi/delimitMate'
+Bundle 'bling/vim-airline'
+Bundle 'godlygeek/tabular'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mhinz/vim-startify'
+Bundle 'mileszs/ack.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'rizzatti/dash.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/taglist.vim'
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
 " Make Vim more useful
 set nocompatible
@@ -39,6 +70,7 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
+set colorcolumn=81
 " Respect modeline in files
 set modeline
 set modelines=4
