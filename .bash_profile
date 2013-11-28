@@ -44,3 +44,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # RBENV
 eval "$(rbenv init -)"
+
+# AWS CLI
+complete -C aws_completer aws
