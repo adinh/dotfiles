@@ -2,8 +2,8 @@
 cd "$(dirname "$0")"
 git pull
 function doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av .
-  rm -rf ~/.vim/bundle
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+  rm -rf ~/.vim/bundle/vundle
   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   vim +BundleInstall +qall
 }
