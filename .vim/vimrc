@@ -41,6 +41,7 @@ Bundle 'vim-scripts/taglist.vim'
 " Make Vim more useful
 set nocompatible
 
+set autoread
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -77,7 +78,7 @@ set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
-syntax on
+syntax enable
 " Highlight current line
 set cursorline
 " Tabs and indenting
