@@ -1,23 +1,29 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 git pull
-function doIt() {
+
+function syncHome() {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
-  VUNDLE_DIR="~/.vim/bundle/vundle"
+}
+
+function vundleMe() {
+  VUNDLE_DIR="$HOME/.vim/bundle/vundle"
   if [ ! -d "$VUNDLE_DIR" ]; then
-    echo 'duddee'
     git clone https://github.com/gmarik/vundle.git $VUNDLE_DIR
   fi
   vim +BundleInstall +qall
 }
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-  doIt
+  syncHome
+  vundleMe
 else
   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    doIt
+    syncHome
+    vundleMe
   fi
 fi
-unset doIt
+unset syncHome vundleMe
 source ~/.bash_profile
