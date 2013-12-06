@@ -3,8 +3,11 @@ cd "$(dirname "$0")"
 git pull
 function doIt() {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
-  rm -rf ~/.vim/bundle/vundle
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  VUNDLE_DIR="~/.vim/bundle/vundle"
+  if [ ! -d "$VUNDLE_DIR" ]; then
+    echo 'duddee'
+    git clone https://github.com/gmarik/vundle.git $VUNDLE_DIR
+  fi
   vim +BundleInstall +qall
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
