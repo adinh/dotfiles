@@ -143,6 +143,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.json setfiletype json syntax=javascript
   au BufNewFile,BufRead *.rep setfiletype rep syntax=ruby
   au BufNewFile,BufRead *.god setfiletype god syntax=ruby
+  au BufNewFile,BufRead *.gradle setfiletype gradle syntax=groovy
 endif
 
 " resize current buffer by +/- 5
