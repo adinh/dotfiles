@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cd "$(dirname "$0")"
-git pull
+git pull origin master
 
 function syncHome() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av --no-perms . ~
+  source ~/.bash_profile
 }
 
 function vundleMe() {
@@ -26,4 +27,3 @@ else
   fi
 fi
 unset syncHome vundleMe
-source ~/.bash_profile
