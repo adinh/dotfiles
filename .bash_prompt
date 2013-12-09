@@ -1,9 +1,5 @@
-# @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
-# Shamelessly copied from https://github.com/gf3/dotfiles
-# Screenshot: http://i.imgur.com/s0Blh.png
-
-PROMPT_COMMAND='make_prompt'
-
 function make_prompt() {
-  export PS1="$(powerline-shell.py $?)"
+  export PS1="$(powerline-shell.py $? --cwd-max-depth 3 2> /dev/null)"
 }
+
+export PROMPT_COMMAND='make_prompt'
