@@ -1,9 +1,7 @@
 colorscheme base16-eighties
 set background=dark
 
-filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
