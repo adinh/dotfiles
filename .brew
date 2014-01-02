@@ -2,24 +2,43 @@
 
 brew update && brew upgrade
 
-brew install ack
-brew install autoconf
-brew install bash
-brew install fontforge
-brew install freetds
-brew install gettext
-brew install git
-brew install jpeg
-brew install libpng
-brew install libtiff
-brew install mercurial
-brew install mysql
-brew install node
-brew install pkg-config
-brew install rbenv
-brew install readline
-brew install ruby-build
-brew install vim
-brew install wget --enable-iri
+formulas=(
+  ack
+  autoconf
+  bash
+  chruby
+  ctags
+  elasticsearch
+  fontforge
+  freetds
+  gettext
+  git
+  gradle
+  imagemagick
+  ipcalc
+  jpeg
+  libpng
+  libtiff
+  mercurial
+  mongodb
+  mysql
+  node
+  ngrep
+  phantomjs
+  pkg-config
+  readline
+  reattach-to-user-namespace
+  ruby-build
+  sqlite
+  unixodbc
+  vim
+  watch
+  "wget --with-iri"
+)
 
-brew cleanup
+for formula in "${formulas[@]}"
+do
+  brew install $formula
+done
+
+brew cleanup --force
