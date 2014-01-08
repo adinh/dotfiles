@@ -14,6 +14,7 @@ export NODE_PATH="/usr/local/share/npm/lib/node_modules"
 # PATH
 PATH="/usr/local/share/npm/bin:$PATH"
 PATH="$HOME/Library/Haskell/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
