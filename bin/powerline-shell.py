@@ -328,14 +328,18 @@ def get_git_status():
 
 
 def add_git_segment():
-    #cmd = "git branch 2> /dev/null | grep -e '\\*'"
-    p1 = subprocess.Popen(['git', 'branch', '--no-color'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    p2 = subprocess.Popen(['grep', '-e', '\\*'], stdin=p1.stdout, stdout=subprocess.PIPE)
-    output = p2.communicate()[0].strip()
-    if not output:
+    # See http://git-blame.blogspot.com/2013/06/checking-current-branch-programatically.html
+    p = subprocess.Popen(['git', 'symbolic-ref', '-q', 'HEAD'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = p.communicate()
+
+    if 'Not a git repo' in err:
         return
 
-    branch = output.rstrip()[2:]
+    if out:
+        branch = out[len('refs/heads/'):].rstrip()
+    else:
+        branch = '(Detached)'
+
     has_pending_commits, has_untracked_files, origin_position = get_git_status()
     branch += origin_position
     if has_untracked_files:
