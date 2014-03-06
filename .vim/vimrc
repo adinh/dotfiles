@@ -28,6 +28,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'chriskempson/base16-vim'
+Bundle 'airblade/vim-gitgutter'
 
 colorscheme base16-eighties
 set background=dark
@@ -141,6 +142,8 @@ if has("autocmd")
   au BufNewFile,BufRead *.god setfiletype god syntax=ruby
   au BufNewFile,BufRead *.gradle setfiletype gradle syntax=groovy
   au BufNewFile,BufRead *.tag setfiletype tag syntax=java
+
+  au FileType javascript set tabstop=4|set shiftwidth=4
 endif
 
 " resize current buffer by +/- 5
