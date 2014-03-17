@@ -3,30 +3,43 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+" General
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
-Bundle 'godlygeek/tabular'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-startify'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'chriskempson/base16-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+
+" Programming
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-Bundle 'pangloss/vim-javascript'
+Bundle 'vim-scripts/taglist.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'rizzatti/funcoo.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
+
+" Ruby
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'chriskempson/base16-vim'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-rails'
+Bundle 'thoughtbot/vim-rspec'
+
+" Javascript
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+
+" HTML
+Bundle 'amirh/HTML-AutoCloseTag'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'tpope/vim-haml'
 
 colorscheme base16-tomorrow
 set background=dark
@@ -176,7 +189,7 @@ vmap <Leader>a> :Tabularize /=><cr>
 " Taglist bundle
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let Tlist_WinWidth=50
-map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=log --exclude=.git * $(bundle show --paths) $*<CR>
 map <F4> :TlistToggle<cr>
 
 " CtrlP bundle
