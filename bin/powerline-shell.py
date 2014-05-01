@@ -129,6 +129,7 @@ class DefaultColor:
     """
     USERNAME_FG = 250
     USERNAME_BG = 240
+    USERNAME_ROOT_BG = 124
 
     HOSTNAME_FG = 250
     HOSTNAME_BG = 238
@@ -181,6 +182,7 @@ class DefaultColor:
     """
     USERNAME_FG = 250
     USERNAME_BG = 240
+    USERNAME_ROOT_BG = 124
 
     HOSTNAME_FG = 250
     HOSTNAME_BG = 238
@@ -309,7 +311,7 @@ def get_git_status():
     has_untracked_files = False
     origin_position = ""
     output = subprocess.Popen(['git', 'status', '--ignore-submodules'],
-            env={"LANG": "C"}, stdout=subprocess.PIPE).communicate()[0]
+            env={"LANG": "C", "HOME": os.getenv("HOME")}, stdout=subprocess.PIPE).communicate()[0]
     for line in output.split('\n'):
         origin_status = re.findall(
             r"Your branch is (ahead|behind).*?(\d+) comm", line)
