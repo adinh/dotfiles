@@ -13,6 +13,7 @@ formulas=(
   freetds
   gettext
   git
+  "gnu-sed --default-names"
   gradle
   imagemagick
   ipcalc
@@ -29,6 +30,7 @@ formulas=(
   readline
   reattach-to-user-namespace
   ruby-build
+  selecta
   sqlite
   unixodbc
   vim
