@@ -13,6 +13,7 @@ formulas=(
   freetds
   gettext
   git
+  "grep --default-names"
   "gnu-sed --default-names"
   gradle
   imagemagick
