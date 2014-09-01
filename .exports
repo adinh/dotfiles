@@ -14,7 +14,7 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export GOPATH="/usr/local/bin/go"
 
 # PATH
-PATH="/usr/local/share/npm/bin:$PATH"
+PATH="$(npm bin):$PATH"
 PATH="$HOME/Library/Haskell/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
 export PATH
