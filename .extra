@@ -9,6 +9,7 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 # Ruby stuff
 export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_GC_HEAP_INIT_SLOTS=500000
 export RUBY_HEAP_SLOTS_INCREMENT=250000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
@@ -28,3 +29,5 @@ alias tcx='$CATALINA_HOME/bin/shutdown.sh'
 alias tct='tail -f ${CATALINA_BASE}/logs/catalina.out'
 alias tcw='cd ${CATALINA_BASE}/webapps'
 alias tstart='tcx && cd ~/Workspace/consumer-search/consumer-search; gradle reaMakeDev && tcs'
+
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
