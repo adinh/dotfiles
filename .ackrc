@@ -4,8 +4,9 @@
 
 # Exclusions
 --ignore-file=is:tags
---ignore-dir=is:log
---ignore-dir=is:vendor
---ignore-dir=is:coverage
---ignore-dir=is:target
 --ignore-dir=is:build
+--ignore-dir=is:coverage
+--ignore-dir=is:log
+--ignore-dir=is:target
+--ignore-dir=is:tmp
+--ignore-dir=is:vendor
