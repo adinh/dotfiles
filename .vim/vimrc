@@ -26,6 +26,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
+Bundle 'editorconfig/editorconfig-vim'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -199,7 +200,7 @@ map <F4> :TlistToggle<cr>
 " CtrlP bundle
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](target|coverage|log|vendor|reports|build|tmp)$',
+  \ 'dir': '\v[\/](target|coverage|log|vendor|reports|build|tmp|\.git)$',
   \ 'file': '\v(tags)$'
   \ }
 
@@ -220,3 +221,7 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " Disable auto install Go packages
 let g:go_disable_autoinstall = 1
+
+" GitGutter bundle
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
