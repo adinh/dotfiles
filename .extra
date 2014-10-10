@@ -30,4 +30,4 @@ alias tct='tail -f ${CATALINA_BASE}/logs/catalina.out'
 alias tcw='cd ${CATALINA_BASE}/webapps'
 alias tstart='tcx && cd ~/Workspace/consumer-search/consumer-search; gradle reaMakeDev && tcs'
 
-alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias simulator='open /Applications/Xcode.app/Contents/Applications/iOS\ Simulator.app/'
