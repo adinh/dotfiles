@@ -9,6 +9,7 @@ formulas=(
   chruby
   ctags
   elasticsearch
+  ffmpeg
   fontforge
   freetds
   gettext
