@@ -8,6 +8,12 @@ bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
 
 bind g:cmd grid padding:5 0:6,6 1:6,6
 
+# Resize Bindings
+bind right:alt resize +10% +0
+bind left:alt  resize -10% +0
+bind up:alt    resize +0   -10%
+bind down:alt  resize +0   +10%
+
 # Abstract positions
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
