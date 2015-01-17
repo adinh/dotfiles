@@ -47,8 +47,9 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'tpope/vim-haml'
 
-colorscheme base16-tomorrow
+colorscheme base16-railscasts
 set background=dark
+let base16colorspace=256
 
 filetype plugin indent on
 
