@@ -40,8 +40,12 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Chruby
 source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.0
+chruby ruby-2.1
 source /usr/local/share/chruby/auto.sh
 
 # AWS CLI
 complete -C aws_completer aws
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
