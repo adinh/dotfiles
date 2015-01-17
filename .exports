@@ -17,6 +17,7 @@ export GOPATH="/usr/local/bin/go"
 PATH="$(npm bin):$PATH"
 PATH="$HOME/Library/Haskell/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
+PATH="$PATH:$NODE_PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
