@@ -204,7 +204,7 @@ map <F4> :TlistToggle<cr>
 " CtrlP bundle
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](target|coverage|log|vendor|reports|build|tmp|\.git)$',
+  \ 'dir': '\v[\/](target|coverage|log|vendor|node_modules|reports|build|tmp|\.git)$',
   \ 'file': '\v(tags)$'
   \ }
 
