@@ -40,6 +40,8 @@ Bundle 'thoughtbot/vim-rspec'
 " Javascript
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'burnettk/vim-angular'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
