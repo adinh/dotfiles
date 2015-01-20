@@ -29,7 +29,6 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'jpalardy/vim-slime'
-Bundle 'Shougo/neocomplete.vim'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -237,6 +236,3 @@ let g:slime_target = "tmux"
 
 " Syntastic
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "myhotcompany-']
-
-" NeoComplete
-let g:neocomplete#enable_at_startup = 1
