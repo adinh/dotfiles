@@ -6,6 +6,7 @@ formulas=(
   ack
   autoconf
   bash
+  bash-completion
   chruby
   ctags
   elasticsearch
@@ -17,11 +18,12 @@ formulas=(
   "grep --default-names"
   "gnu-sed --default-names"
   gradle
-  imagemagick
+  "imagemagick --with-webp"
   ipcalc
   jpeg
   libpng
   libtiff
+  lua
   mercurial
   mongodb
   mysql
