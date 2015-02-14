@@ -235,4 +235,6 @@ nmap [h <Plug>GitGutterPrevHunk
 let g:slime_target = "tmux"
 
 " Syntastic
+let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "myhotcompany-']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
