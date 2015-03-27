@@ -4,7 +4,7 @@ config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 
-bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+bind e:ctrl;alt;cmd hint ASDFGHJKLQWERTYUIOPCVBN
 
 bind g:cmd grid padding:5 0:6,6 1:6,6
 
