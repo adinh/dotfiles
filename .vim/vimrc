@@ -29,6 +29,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'jpalardy/vim-slime'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'guns/vim-clojure-static'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -43,6 +45,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'burnettk/vim-angular'
+Bundle 'mxw/vim-jsx'
+Bundle 'mattn/emmet-vim'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
