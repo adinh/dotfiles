@@ -6,7 +6,7 @@ Bundle 'gmarik/vundle'
 " General
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'mhinz/vim-startify'
