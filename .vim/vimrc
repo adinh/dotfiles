@@ -31,6 +31,10 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'guns/vim-clojure-static'
+Bundle 'wavded/vim-stylus'
+
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -160,7 +164,9 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
+  au BufNewFile,BufRead *.hbs setfiletype html syntax=html
   au BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  au BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
   au BufNewFile,BufRead *.rep setfiletype rep syntax=ruby
   au BufNewFile,BufRead *.god setfiletype god syntax=ruby
   au BufNewFile,BufRead *.gradle setfiletype gradle syntax=groovy
@@ -240,3 +246,4 @@ let g:slime_target = "tmux"
 let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "myhotcompany-']
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_ruby_checkers = ['rubocop']
