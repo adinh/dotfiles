@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-brew update && brew upgrade
+brew update
+brew upgrade --all
 
 formulas=(
   ack
@@ -11,6 +12,7 @@ formulas=(
   ctags
   elasticsearch
   ffmpeg
+  findutils
   fontforge
   freetds
   gettext
@@ -36,8 +38,9 @@ formulas=(
   ruby-build
   selecta
   sqlite
+  the_silver_searcher
   unixodbc
-  vim
+  "vim --override-system-vi"
   watch
   "wget --with-iri"
 )
