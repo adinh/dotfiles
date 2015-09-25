@@ -1,0 +1,9 @@
+/build
+/coverage
+/log
+/logs
+/target
+/tmp
+tags
+*.log
+*.tmp*
