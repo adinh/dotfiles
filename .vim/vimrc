@@ -16,11 +16,11 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'rking/ag.vim'
 
 " Programming
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'rizzatti/funcoo.vim'
