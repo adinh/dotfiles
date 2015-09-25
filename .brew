@@ -6,12 +6,15 @@ brew upgrade --all
 formulas=(
   ack
   autoconf
+  automake
   bash
-  bash-completion
+  bash-completion2
   chruby
+  cmake
   ctags
   elasticsearch
   ffmpeg
+  figlet
   findutils
   fontforge
   freetds
@@ -20,9 +23,11 @@ formulas=(
   "grep --default-names"
   "gnu-sed --default-names"
   gradle
+  graphviz
   "imagemagick --with-webp"
   ipcalc
   jpeg
+  jq
   libpng
   libtiff
   lua
@@ -33,12 +38,16 @@ formulas=(
   ngrep
   phantomjs
   pkg-config
+  postgresql
+  python
   readline
   reattach-to-user-namespace
   ruby-build
   selecta
   sqlite
   the_silver_searcher
+  tmux
+  tree
   unixodbc
   "vim --override-system-vi"
   watch
