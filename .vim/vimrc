@@ -32,6 +32,10 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'guns/vim-clojure-static'
 Bundle 'wavded/vim-stylus'
+Bundle 'isRuslan/vim-es6'
+
+" Clojure
+Plugin 'tpope/vim-fireplace'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
