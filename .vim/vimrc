@@ -109,6 +109,8 @@ set number
 syntax enable
 " Highlight current line
 set cursorline
+" Highlight current column
+set cursorcolumn
 " Tabs and indenting
 set bs=2
 set tabstop=2
