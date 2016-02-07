@@ -5,7 +5,8 @@ Bundle 'gmarik/vundle'
 
 " General
 Bundle 'Raimondi/delimitMate'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'JazzCore/ctrlp-cmatcher'
