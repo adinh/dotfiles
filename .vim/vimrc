@@ -1,39 +1,44 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
 
-Bundle 'gmarik/vundle'
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
 
 " General
-Bundle 'Raimondi/delimitMate'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'mhinz/vim-startify'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'chriskempson/base16-vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'rking/ag.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'mhinz/vim-startify'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'rking/ag.vim'
 
 " Programming
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'jpalardy/vim-slime'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'guns/vim-clojure-static'
-Bundle 'wavded/vim-stylus'
-Bundle 'isRuslan/vim-es6'
+Plugin 'scrooloose/syntastic'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jpalardy/vim-slime'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'guns/vim-clojure-static'
+Plugin 'wavded/vim-stylus'
+Plugin 'isRuslan/vim-es6'
 
 " Clojure
 Plugin 'tpope/vim-fireplace'
@@ -42,35 +47,34 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'elixir-lang/vim-elixir'
 
 " Go
-Bundle 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 
 " Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'thoughtbot/vim-rspec'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
 
 " Javascript
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'burnettk/vim-angular'
-Bundle 'mxw/vim-jsx'
-Bundle 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
+Plugin 'mxw/vim-jsx'
+Plugin 'mattn/emmet-vim'
 
 " HTML
-Bundle 'amirh/HTML-AutoCloseTag'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'gorodinskiy/vim-coloresque'
-Bundle 'tpope/vim-haml'
+Plugin 'amirh/HTML-AutoCloseTag'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'tpope/vim-haml'
+
+call vundle#end()
+
+filetype plugin indent on
 
 colorscheme base16-railscasts
 set background=dark
 let base16colorspace=256
-
-filetype plugin indent on
-
-" Make Vim more useful
-set nocompatible
 
 set autoread
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -180,6 +184,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.tag setfiletype tag syntax=java
 
   au FileType javascript set tabstop=2 shiftwidth=2
+  au FileType make set noexpandtab shiftwidth=8 softtabstop=0
 endif
 
 " resize current buffer by +/- 5
@@ -191,6 +196,7 @@ nnoremap <S-right> :vertical resize +5<cr>
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16_eighties'
 
 " ctags search
 nnoremap <c-]> g<c-]>
