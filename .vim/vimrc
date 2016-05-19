@@ -179,7 +179,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.gradle setfiletype gradle syntax=groovy
   au BufNewFile,BufRead *.tag setfiletype tag syntax=java
 
-  au FileType javascript set tabstop=4|set shiftwidth=4
+  au FileType javascript set tabstop=2 shiftwidth=2
 endif
 
 " resize current buffer by +/- 5
