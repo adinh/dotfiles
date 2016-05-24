@@ -4,23 +4,26 @@ call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
+Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
+
+" Markdown
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 " Programming
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/taglist.vim'
-Plug 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 Plug 'rizzatti/funcoo.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
@@ -28,31 +31,32 @@ Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'Valloric/YouCompleteMe'
-Plug 'guns/vim-clojure-static'
 Plug 'wavded/vim-stylus'
-Plug 'isRuslan/vim-es6'
 
 " Clojure
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
 " Elixir
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 " Go
 Plug 'fatih/vim-go'
 
 " Ruby
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
+Plug 'isRuslan/vim-es6'
 
 " HTML
 Plug 'amirh/HTML-AutoCloseTag'
@@ -217,17 +221,50 @@ let Tlist_WinWidth=50
 map <F8> :!/usr/local/bin/ctags -R . $(bundle list --paths)<CR>
 map <F4> :TlistToggle<cr>
 
-" CtrlP bundle
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](target|coverage|log|vendor|node_modules|reports|build|tmp|\.git)$',
-  \ 'file': '\v(tags)$'
-  \ }
+" ----------------------------------------------------------------------------
+" vim-ruby (https://github.com/vim-ruby/vim-ruby/issues/33)
+" ----------------------------------------------------------------------------
+if !empty(matchstr($MY_RUBY_HOME, 'jruby'))
+  let g:ruby_path = join(split(
+    \ glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".
+    \ glob($MY_RUBY_HOME.'/lib/rubysite_ruby/*'),"\n"), ',')
+endif
+let g:ruby_fold = 1
+let g:ruby_no_expensive = 1
 
-" CtrlP Plugins
-let g:ctrlp_extensions = ['funky']
-nnoremap <Space>fu :CtrlPFunky<Cr>
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+" ----------------------------------------------------------------------------
+" gv.vim / gl.vim
+" ----------------------------------------------------------------------------
+function! s:gv_expand()
+  let line = getline('.')
+  GV --name-status
+  call search('\V'.line, 'c')
+  normal! zz
+endfunction
+
+autocmd! FileType GV nnoremap <buffer> <silent> + :call <sid>gv_expand()<cr>
+
+" ----------------------------------------------------------------------------
+" FZF
+" ----------------------------------------------------------------------------
+if has('nvim')
+  let $FZF_DEFAULT_OPTS .= ' --inline-info'
+endif
+
+nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
+nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+nnoremap <silent> <Leader>AG :Ag <C-R><C-A><CR>
+nnoremap <silent> <Leader>` :Marks<CR>
+
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
