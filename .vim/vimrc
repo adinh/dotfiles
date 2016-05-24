@@ -21,7 +21,9 @@ Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 " Programming
 Plug 'scrooloose/syntastic'
-Plug 'godlygeek/tabular'
+
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
+
 Plug 'vim-scripts/taglist.vim'
 Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 Plug 'rizzatti/funcoo.vim'
@@ -183,6 +185,8 @@ if has("autocmd")
 
   au FileType javascript set tabstop=2 shiftwidth=2
   au FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
+  au FileType lisp,clojure,scheme RainbowParentheses
 endif
 
 " resize current buffer by +/- 5
@@ -204,16 +208,6 @@ vnoremap <c-]> g<c-]>
 silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
-
-" Tabular bundle
-nmap <Leader>a{ :Tabularize /{<CR>
-vmap <Leader>a{ :Tabularize /{<CR>
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-nmap <Leader>a> :Tabularize /=><cr>
-vmap <Leader>a> :Tabularize /=><cr>
 
 " Taglist bundle
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
@@ -251,7 +245,7 @@ if has('nvim')
   let $FZF_DEFAULT_OPTS .= ' --inline-info'
 endif
 
-nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <Leader><Leader> :Files<CR>
 nnoremap <silent> <Leader><Enter> :Buffers<CR>
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 nnoremap <silent> <Leader>AG :Ag <C-R><C-A><CR>
@@ -265,6 +259,15 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
+
+" ----------------------------------------------------------------------------
+" EasyAlign
+" ----------------------------------------------------------------------------
+" Start interactive EasyAlign in visual mode
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign with a Vim movement
+nmap ga <Plug>(EasyAlign)
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
