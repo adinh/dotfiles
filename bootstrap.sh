@@ -7,23 +7,19 @@ function syncHome() {
   source ~/.bash_profile
 }
 
-function vundleMe() {
-  VUNDLE_DIR="$HOME/.vim/bundle/vundle"
-  if [ ! -d "$VUNDLE_DIR" ]; then
-    git clone https://github.com/gmarik/vundle.git $VUNDLE_DIR
-  fi
-  vim +BundleInstall +qall
+function plugMe() {
+  vim +PlugInstall +qall
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   syncHome
-  vundleMe
+  plugMe
 else
   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     syncHome
-    vundleMe
+    plugMe
   fi
 fi
-unset syncHome vundleMe
+unset syncHome plugMe
