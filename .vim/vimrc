@@ -16,6 +16,9 @@ Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 
+" All languages
+Plug 'sheerun/vim-polyglot'
+
 " Markdown
 Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
@@ -33,30 +36,17 @@ Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'Valloric/YouCompleteMe'
-Plug 'wavded/vim-stylus'
 
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
-" Elixir
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-
-" Go
-Plug 'fatih/vim-go'
-
-" Ruby
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 
 " Javascript
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
-Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'isRuslan/vim-es6'
 
@@ -64,7 +54,6 @@ Plug 'isRuslan/vim-es6'
 Plug 'amirh/HTML-AutoCloseTag'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
 
 call plug#end()
 
