@@ -21,6 +21,7 @@ PATH="$HOME/Library/Haskell/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
 PATH="$PATH:$NODE_PATH"
 PATH="$PATH:$PYTHONPATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
