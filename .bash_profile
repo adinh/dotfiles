@@ -52,3 +52,6 @@ complete -C aws_completer aws;
 
 # Docker
 eval $(docker-machine env)
+
+# FZF Magic
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
