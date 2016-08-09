@@ -15,6 +15,7 @@ Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'szw/vim-tags'
 
 " All languages
 Plug 'sheerun/vim-polyglot'
@@ -27,7 +28,6 @@ Plug 'scrooloose/syntastic'
 
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 
-Plug 'vim-scripts/taglist.vim'
 Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 Plug 'rizzatti/funcoo.vim'
 Plug 'tpope/vim-dispatch'
@@ -189,20 +189,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16_eighties'
 
-" ctags search
+" Ctags
 nnoremap <c-]> g<c-]>
 vnoremap <c-]> g<c-]>
+let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', 'dist/', 'tmp/', 'node_modules/']
+map <F8> :TagsGenerate!
 
 " NERDTree bundle
 silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
-
-" Taglist bundle
-let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
-let Tlist_WinWidth=50
-map <F8> :!/usr/local/bin/ctags -R . $(bundle list --paths)<CR>
-map <F4> :TlistToggle<cr>
 
 " ----------------------------------------------------------------------------
 " vim-ruby (https://github.com/vim-ruby/vim-ruby/issues/33)
