@@ -27,6 +27,7 @@
   # Undo a `git push`
   undopush = push -f origin HEAD^:master
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  praise = blame
 
 [apply]
   # Detect whitespace errors when applying a patch
