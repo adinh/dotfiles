@@ -516,9 +516,9 @@ def add_jobs_segment(powerline):
 add_jobs_segment(powerline)
 def add_root_segment(powerline):
     root_indicators = {
-        'bash': ' \\$ ',
+        'bash': ' ' + u'\u03BB' + ' ',
         'zsh': ' %# ',
-        'bare': ' $ ',
+        'bare': ' ' + u'\u03BB' + ' ',
     }
     bg = Color.CMD_PASSED_BG
     fg = Color.CMD_PASSED_FG
