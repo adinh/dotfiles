@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
-Plug 'w0ng/vim-hybrid'
+Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
@@ -62,8 +62,7 @@ set nocompatible
 filetype plugin indent on
 
 set background=dark
-let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
+colorscheme base16-eighties
 
 set autoread
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
