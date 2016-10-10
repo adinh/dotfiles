@@ -43,15 +43,16 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Chruby
-source /usr/local/share/chruby/chruby.sh;
+source /usr/local/opt/chruby/share/chruby/chruby.sh;
 chruby ruby-2.3;
-source /usr/local/share/chruby/auto.sh;
+source /usr/local/opt/chruby/share/chruby/auto.sh;
 
 # AWS CLI
 complete -C aws_completer aws;
 
-# Docker
-eval $(docker-machine env)
-
 # FZF Magic
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# NVM Node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
