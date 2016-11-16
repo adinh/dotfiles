@@ -170,6 +170,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.god setfiletype god syntax=ruby
   au BufNewFile,BufRead *.gradle setfiletype gradle syntax=groovy
   au BufNewFile,BufRead *.tag setfiletype tag syntax=java
+  au BufNewFile,BufRead *.exs set filetype=elixir syntax=elixir
 
   au FileType javascript set tabstop=2 shiftwidth=2
   au FileType make set noexpandtab shiftwidth=8 softtabstop=0
