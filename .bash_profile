@@ -53,6 +53,9 @@ complete -C aws_completer aws;
 # FZF Magic
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# FASD Magic
+eval "$(fasd --init auto)"
+
 # NVM Node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
