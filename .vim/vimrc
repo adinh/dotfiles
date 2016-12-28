@@ -51,7 +51,7 @@ Plug 'mattn/emmet-vim'
 Plug 'isRuslan/vim-es6'
 
 " HTML
-Plug 'amirh/HTML-AutoCloseTag'
+Plug 'alvan/vim-closetag', { 'for': 'html' }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 
