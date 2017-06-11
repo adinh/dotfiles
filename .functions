@@ -144,3 +144,7 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+function frg() {
+  rg --files --no-ignore --hidden --follow --glob '!.git/*' "$@" . | fzf --preview "pygmentize -O style=monokai -f console256 -g {}"
+}
