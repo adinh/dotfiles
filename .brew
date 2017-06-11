@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu
+
 brew update
 brew upgrade --all
 
@@ -18,8 +20,10 @@ formulas=(
   findutils
   fontforge
   freetds
+  fzf
   gettext
   git
+  go
   "grep --default-names"
   "gnu-sed --default-names"
   gradle
@@ -30,8 +34,6 @@ formulas=(
   jq
   libpng
   libtiff
-  lua
-  mercurial
   mongodb
   mysql
   node
@@ -42,8 +44,8 @@ formulas=(
   python
   readline
   reattach-to-user-namespace
+  ripgrep
   ruby-build
-  selecta
   sqlite
   the_silver_searcher
   tmux
