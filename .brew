@@ -10,11 +10,11 @@ formulas=(
   autoconf
   automake
   bash
-  bash-completion2
   chruby
   cmake
   ctags
   elasticsearch
+  elixir
   ffmpeg
   figlet
   findutils
@@ -24,23 +24,22 @@ formulas=(
   gettext
   git
   go
-  "grep --default-names"
-  "gnu-sed --default-names"
+  "grep --with-default-names"
+  "gnu-sed --with-default-names"
   gradle
   graphviz
   "imagemagick --with-webp"
   ipcalc
   jpeg
   jq
+  leiningen
   libpng
   libtiff
-  mongodb
-  mysql
+  neovim
   node
   ngrep
   phantomjs
   pkg-config
-  postgresql
   python
   readline
   reattach-to-user-namespace
@@ -53,7 +52,7 @@ formulas=(
   unixodbc
   "vim --override-system-vi"
   watch
-  "wget --with-iri"
+  wget
 )
 
 for formula in "${formulas[@]}"
