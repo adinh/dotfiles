@@ -15,7 +15,7 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
 
 # Java stuff
-export JAVA_OPTS="-Xmx768M -XX:MaxPermSize=256m -Dfile.encoding=UTF-8"
+export JAVA_OPTS="-Xmx768M -XX:MaxMetaspaceSize=256m -Dfile.encoding=UTF-8"
 export CATALINA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true"
 export GRADLE_OPTS='-Xmx1512M -XX:MaxMetaspaceSize=256M'
 
