@@ -11,7 +11,3 @@ export CATALINA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Dcom.sun.management.j
 export GRADLE_OPTS='-Xmx1512M -XX:MaxMetaspaceSize=256M'
 
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
-
-# Zendesk
-export SMTP_URL=smtp://$DOCKER_HOST_IP:1025/
-export DEDICATED_DOCKER_DISK=true
