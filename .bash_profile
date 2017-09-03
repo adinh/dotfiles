@@ -52,6 +52,7 @@ complete -C aws_completer aws;
 
 # FZF Magic
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow --glob '!.git/*'"
 
 # FASD Magic
 eval "$(fasd --init auto)"
