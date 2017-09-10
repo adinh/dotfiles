@@ -22,4 +22,5 @@ else
     plugMe
   fi
 fi
+
 unset syncHome plugMe
