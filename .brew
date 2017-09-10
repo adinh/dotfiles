@@ -13,7 +13,6 @@ formulas=(
   chruby
   cmake
   ctags
-  elasticsearch
   elixir
   ffmpeg
   figlet
@@ -26,7 +25,6 @@ formulas=(
   go
   "grep --with-default-names"
   "gnu-sed --with-default-names"
-  gradle
   graphviz
   "imagemagick --with-webp"
   ipcalc
@@ -38,7 +36,6 @@ formulas=(
   neovim
   node
   ngrep
-  phantomjs
   pkg-config
   python
   readline
