@@ -176,6 +176,9 @@ if has("autocmd")
   au FileType lisp,clojure,scheme RainbowParentheses
 endif
 
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " resize current buffer by +/- 5
 nnoremap <S-left> :vertical resize -5<cr>
 nnoremap <S-down> :resize +5<cr>
