@@ -11,7 +11,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'rking/ag.vim'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -224,14 +224,10 @@ autocmd! FileType GV nnoremap <buffer> <silent> + :call <sid>gv_expand()<cr>
 " ----------------------------------------------------------------------------
 " FZF
 " ----------------------------------------------------------------------------
-if has('nvim')
-  let $FZF_DEFAULT_OPTS .= ' --inline-info'
-endif
-
 nnoremap <silent> <Leader><Leader> :Files<CR>
 nnoremap <silent> <Leader><Enter> :Buffers<CR>
-nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
-nnoremap <silent> <Leader>AG :Ag <C-R><C-A><CR>
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+nnoremap <silent> <Leader>RG :Rg <C-R><C-A><CR>
 nnoremap <silent> <Leader>` :Marks<CR>
 
 imap <c-x><c-k> <plug>(fzf-complete-word)
