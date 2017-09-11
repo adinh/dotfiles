@@ -41,6 +41,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
+" Ruby
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 
