@@ -17,6 +17,7 @@ alias vim="nvim"
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias e="emacsclient -a '' -nqc \"\$@\""
 
 # Git
 alias gst="git status"
