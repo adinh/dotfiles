@@ -19,6 +19,7 @@ PATH="$PATH:$NODE_PATH"
 PATH="/usr/local/opt/python/libexec/bin:$PATH"
 PATH="$PATH:$PYTHONPATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 export PATH
 
 export ARCHFLAGS="-arch x86_64"
