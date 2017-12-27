@@ -44,7 +44,7 @@ fi;
 
 # Chruby
 source /usr/local/share/chruby/chruby.sh;
-chruby ruby-2.4;
+chruby ruby-2.5;
 source /usr/local/share/chruby/auto.sh;
 
 # AWS CLI
